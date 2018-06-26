@@ -27,6 +27,8 @@ grails.plugin.springsecurity.authority.className = 'org.grails.playground.Role'
 
 grails.plugin.springsecurity.logout.postOnly = false
 
+grails.plugin.springsecurity.oauth2.active = true
+
 grails.plugin.springsecurity.oauth2.domainClass = 'org.grails.playground.OAuthID'
 grails.plugin.springsecurity.securityConfigType = 'InterceptUrlMap'
 grails.plugin.springsecurity.rejectIfNoRule = false

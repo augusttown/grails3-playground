@@ -47,7 +47,9 @@ dependencies {
     compile "org.hibernate:hibernate-ehcache:5.1.2.Final"
 
     compile 'org.grails.plugins:spring-security-core:3.1.2'
-    compile 'com.ch.grails.plugins:ch-oidc-sso-plugin:1.0.0'
+    compile 'com.ch.grails.plugins:grails-spring-security-oauth2:1.0.0'
+    compile 'com.ch.grails.plugins:grails-spring-security-oauth2-keycloak:1.0.0'
+    //compile 'com.ch.grails.plugins:ch-oidc-sso-plugin:1.0.0-SNAPSHOT'
 
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
