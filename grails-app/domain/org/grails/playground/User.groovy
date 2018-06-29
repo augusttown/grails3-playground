@@ -18,6 +18,12 @@ class User implements Serializable {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+	Date passwordLastUpdated
+
+	String createdBy
+	Date dateCreated
+	String updatedBy
+	Date dateUpdated
 
     private Set<UserRole> userRole = new HashSet<UserRole>(0);
     static hasMany = [oAuthIDs: OAuthID]
@@ -45,11 +51,16 @@ class User implements Serializable {
 	static constraints = {
 		password blank: false, password: true
 		username blank: false, unique: true
+		createdBy nullable: true
+		dateCreated nullable: true
+		updatedBy nullable: true
+		dateUpdated nullable: true
+		passwordLastUpdated nullable: true
 	}
 
 	static mapping = {
 		table name: 'au_user'
-		id column: 'id'//, generator: 'sequence', params: [sequence: 'user_seq']
+		id column: 'id', generator: 'sequence', params: [sequence: 'user_seq']
 		password column: 'password'
 	}
 
