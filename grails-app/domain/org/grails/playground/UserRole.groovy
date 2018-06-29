@@ -14,6 +14,8 @@ class UserRole implements Serializable {
 
 	User user
 	Role role
+	String createdBy
+	Date dateCreated
 
 	@Override
 	boolean equals(other) {
@@ -79,6 +81,8 @@ class UserRole implements Serializable {
 				}
 			}
 		}
+		createdBy nullable: true
+		dateCreated nullable: true
 	}
 
 	static mapping = {

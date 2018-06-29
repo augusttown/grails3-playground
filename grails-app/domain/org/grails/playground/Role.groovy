@@ -11,7 +11,12 @@ class Role implements Serializable {
 
 	private static final long serialVersionUID = 1
 
+	Long id
 	String authority
+	String createdBy
+	Date dateCreated
+	String description
+	Boolean isActive
 
 	static constraints = {
 		authority blank: false, unique: true
@@ -20,6 +25,6 @@ class Role implements Serializable {
 	static mapping = {
 		//cache true
 		table name: 'au_role'
-		id column: 'id'//, generator: 'sequence', params: [sequence: 'role_seq']
+		id column: 'id', generator: 'sequence', params: [sequence: 'role_seq']
 	}
 }
