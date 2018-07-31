@@ -1,7 +1,8 @@
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'org.grails.playground.User'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'org.grails.playground.UserRole'
-grails.plugin.springsecurity.authority.className = 'org.grails.playground.Role'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.ch.sso.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.ch.sso.UserRole'
+grails.plugin.springsecurity.authority.className = 'com.ch.sso.Role'
+grails.plugin.springsecurity.oauth2.domainClass = 'com.ch.sso.OAuthID'
 
 //grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 //        [pattern: '/',               access: ['permitAll']],
@@ -27,9 +28,6 @@ grails.plugin.springsecurity.authority.className = 'org.grails.playground.Role'
 
 grails.plugin.springsecurity.logout.postOnly = false
 
-grails.plugin.springsecurity.oauth2.active = true
-
-grails.plugin.springsecurity.oauth2.domainClass = 'org.grails.playground.OAuthID'
 grails.plugin.springsecurity.securityConfigType = 'InterceptUrlMap'
 grails.plugin.springsecurity.rejectIfNoRule = false
 grails.plugin.springsecurity.fii.rejectPublicInvocations = false
@@ -73,7 +71,7 @@ security {
                 failureUri = "/oauth2/keycloak/failure"
                 callback = "/oauth2/keycloak/callback"
                 api_key = "grails3-playground"
-                api_secret = "da60dba3-c26e-43fb-a2b5-495b91eab039"
+                api_secret = "be6061d3-a0c5-4082-97fe-2f014c38de2b"
             }
         }
     }
