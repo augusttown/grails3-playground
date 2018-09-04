@@ -34,6 +34,10 @@ grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 
 grails.plugin.springsecurity.interceptUrlMap = [
         [pattern: '/', access: ['ROLE_USER','ROLE_ADMIN']],
+        [pattern: '/secure', access: ['ROLE_USER','ROLE_ADMIN']],
+        [pattern: '/secure/**', access: ['ROLE_USER','ROLE_ADMIN']],
+        [pattern: '/user', access: ['ROLE_USER','ROLE_ADMIN']],
+        [pattern: '/user/**', access: ['ROLE_USER','ROLE_ADMIN']],
         //[pattern: '/', access: ['permitAll']],
         [pattern: '/auth/**', access: ['ROLE_USER','ROLE_ADMIN']],
         //[pattern: '/auth/**', access: ['permitAll']],

@@ -10,6 +10,7 @@ class UrlMappings {
         }
 
         "/"(view:"/index")
+        "/login/auth"(redirect: "/springSecurityOAuth2/authenticate?provider=keycloak")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
